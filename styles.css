@@ -76,6 +76,10 @@ button[data-action="delete"] {
   font-size: 2.2rem; /* a touch bigger if needed */
 }
 
+button[data-action="clear"] {
+  font-weight: 600; /* a touch bigger if needed */
+}
+
 .operator {
   background: #df974d;
   color: white;
