@@ -1,0 +1,92 @@
+/* Basic reset so padding/margins don’t mess with centering */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.display {
+  background: black;
+  color: white;
+  font-size: 3rem;
+  padding: 28px 20px;
+  text-align: right;
+  letter-spacing: 0.05em; /* slight letter spacing to display */
+}
+
+/* horizontal & vertical centered component */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center; /* vertical */
+  background: #232323;
+  font-family: system-ui, sans-serif;
+}
+
+/* overall calculator styles */
+.calculator {
+  width: min(360px, 90vw);
+  background: #222;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+/* button layout */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 90px;
+  gap: 1px;
+  background: #333;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.span-3 {
+  grid-column: span 3;
+}
+
+.span-3,
+.span-2 {
+  justify-content: flex-start; /* optional if you want text left-ish */
+  padding-left: 30px;
+}
+
+/* button styles */
+.btn {
+  font-size: 1.5rem;
+  padding: 20px;
+  border: 1px solid #333;
+  background: #e6e6e6;
+  cursor: pointer;
+
+  /* center the label inside the button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* removes default browser button styling */
+  outline: none;
+}
+
+button[data-action="delete"] {
+  font-size: 2.2rem; /* a touch bigger if needed */
+}
+
+.operator {
+  background: #df974d;
+  color: white;
+  font-weight: 600;
+}
+
+.btn:hover {
+  filter: brightness(0.95);
+}
+
+.btn:active {
+  filter: brightness(0.9);
+  transform: scale(0.98);
+}
