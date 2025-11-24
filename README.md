@@ -18,7 +18,10 @@ A brief demo of the calculator in action:
 - iOS‑style calculator layout
 - Display area with monospace “readout” vibe
 - Number input
+- Basic operators (`+`, `−`, `×`, `÷`)
+- Equals (`=`) button to evaluate expressions
 - Clear (`C`) button
+- Delete / backspace key
 
 ---
 
@@ -49,10 +52,10 @@ iOS_Calculator/
 Buttons are labeled with `data-*` attributes so JavaScript can route clicks cleanly:
 
 - `data-number="7"` → number input
-- `data-operator="+"` → operator selection (to be wired)
+- `data-operator="+"` → operator selection
 - `data-action="clear"` → clear/reset
-- `data-action="delete"` → delete last digit (to be wired)
-- `data-action="equals"` → compute result (to be wired)
+- `data-action="delete"` → delete last digit
+- `data-action="equals"` → compute result
 
 ### JavaScript
 
