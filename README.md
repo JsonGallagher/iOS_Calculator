@@ -9,9 +9,9 @@ This repo is intentionally simple and incremental, so it’s easy to learn from.
 
 ## Demo
 
-A brief demo video of the calculator in action:
+A brief demo of the calculator in action:
 
-[▶️ Watch Calc_Demo.mp4](demo/Calc_Demo.mp4)
+![Demo](demo/calc_demo.gif)
 
 ## Features (current)
 
