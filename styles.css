@@ -12,6 +12,21 @@
   padding: 28px 20px;
   text-align: right;
   letter-spacing: 0.05em; /* slight letter spacing to display */
+  position: relative;
+  overflow: hidden;
+}
+
+.display::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.05) 35%,
+    transparent 60%
+  );
+  pointer-events: none;
 }
 
 /* horizontal & vertical centered component */
@@ -30,6 +45,11 @@ body {
   background: #222;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
+
+  /* simple black frame around the outside */
+  border: 4px solid #000;
+  border-radius: 10px;
+  padding: 6px; /* small inset so buttons don't touch the frame directly */
 }
 
 /* button layout */
@@ -62,14 +82,19 @@ body {
   border: 1px solid #333;
   background: #e6e6e6;
   cursor: pointer;
+  outline: none;
 
   /* center the label inside the button */
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* removes default browser button styling */
-  outline: none;
+  background: linear-gradient(to bottom, #f6f6f6, #dcdcdc);
+  border: 1px solid #b5b5b5;
+  border-radius: 6px;
+
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 -2px 0 rgba(0, 0, 0, 0.25) inset, 0 3px 4px rgba(0, 0, 0, 0.4);
 }
 
 button[data-action="delete"] {
@@ -87,10 +112,11 @@ button[data-action="clear"] {
 }
 
 .btn:hover {
-  filter: brightness(0.95);
+  filter: brightness(0.97);
 }
 
 .btn:active {
-  filter: brightness(0.9);
-  transform: scale(0.98);
+  transform: translateY(1px);
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0.8) inset,
+    0 0 0 rgba(0, 0, 0, 0.25) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
 }

@@ -7,6 +7,12 @@ This repo is intentionally simple and incremental, so it’s easy to learn from.
 
 ---
 
+## Demo
+
+A brief demo video of the calculator in action:
+
+[▶️ Watch Calc_Demo.mp4](demo/Calc_Demo.mp4)
+
 ## Features (current)
 
 - iOS‑style calculator layout
@@ -78,10 +84,6 @@ No build tools needed.
 
 ## Next Steps / TODO
 
-- Wire up operators (`+ − × ÷`)
-- Wire up equals (`=`)
-- Wire up delete/backspace (`←`)
-- Add decimal support
 - Add keyboard input
 - Match iOS behavior more closely (`%`, `±`, chaining rules)
 
